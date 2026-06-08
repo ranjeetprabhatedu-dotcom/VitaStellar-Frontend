@@ -45,7 +45,7 @@ class OfflineTaskQueue {
     if (!this.db) throw new Error("Database not initialized");
 
     const task: PendingTask = {
-      id: `task-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+      id: `task-${Date.now()}-${Math.random().toString(36).slice(2, 11)}`,
       data: taskData,
       timestamp: Date.now(),
       retries: 0,
